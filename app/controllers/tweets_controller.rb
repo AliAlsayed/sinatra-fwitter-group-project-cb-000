@@ -49,7 +49,7 @@ class TweetsController < ApplicationController
         @tweet.update(params)
         redirect "/tweets/#{@tweet.id}"
       else
-        redirect "/tweet/#{@tweet.id}/edit"
+        redirect "/tweets/#{@tweet.id}/edit"
       end
     else
       redirect '/login'
