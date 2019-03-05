@@ -2,5 +2,5 @@
 <h3><%= @tweet.content %></h3>
 <a href="#">Edit Tweet</a>
 <form action="/tweets/<%= @tweet.id %>/delete" method="post">
-
+  <input id="hidden" type="hidden" name="_method" value="">
 </form>
