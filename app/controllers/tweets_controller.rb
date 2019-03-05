@@ -43,7 +43,6 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id' do
-    fail
     if Helpers.logged_in?(session)
       @tweet = Tweet.find(params[:id])
       if !params[:content].empty?
