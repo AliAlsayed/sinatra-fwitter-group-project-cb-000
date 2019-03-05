@@ -47,7 +47,9 @@ class TweetsController < ApplicationController
       @tweet = Tweet.find(params[:id])
       if !params[:content].empty?
         @tweet.update(params)
-        redirect '/tweet/:id'
+        redirect "/tweet/#{@tweet.id}"
+      else
+        erb redirect '/'
       end
     else
       redirect '/login'
